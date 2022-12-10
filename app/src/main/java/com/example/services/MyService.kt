@@ -48,7 +48,6 @@ class MyService : Service() {
         fun intent(context: Context, start: Int): Intent {
             return Intent(context, MyService::class.java).apply {
                 putExtra(EXTRA_START, start)
-
             }
         }
     }
