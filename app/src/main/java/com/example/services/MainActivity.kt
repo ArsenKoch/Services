@@ -21,5 +21,8 @@ class MainActivity : AppCompatActivity() {
         binding.foregroundService.setOnClickListener {
             ContextCompat.startForegroundService(this, MyForegroundService.intent(this))
         }
+        binding.intentService.setOnClickListener {
+            ContextCompat.startForegroundService(this, MyIntentService.intent(this))
+        }
     }
 }
