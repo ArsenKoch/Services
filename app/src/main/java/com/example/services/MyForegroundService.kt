@@ -24,6 +24,7 @@ class MyForegroundService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        log("onStartCommand")
         coroutineScope.launch {
             for (i in 0 until 3) {
                 delay(1000)
@@ -59,13 +60,13 @@ class MyForegroundService : Service() {
     }
 
     private fun log(message: String) {
-        Log.d("MyService", "New message: $message")
+        Log.d("MyService", "MyForegroundService: $message")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        coroutineScope.cancel()
         log("onDestroy")
+        coroutineScope.cancel()
     }
 
     companion object {

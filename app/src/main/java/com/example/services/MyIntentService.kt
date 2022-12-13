@@ -41,7 +41,7 @@ class MyIntentService : IntentService(NAME) {
     }
 
     private fun log(message: String) {
-        Log.d("MyService", "New message: $message")
+        Log.d("MyService", "MyIntentService: $message")
     }
 
     @Deprecated("Deprecated in Java")
