@@ -56,7 +56,7 @@ class MyJobService : JobService() {
         const val JOB_ID = 112
         const val PAGE = "page"
 
-        fun newIntent(page: Int): Intent {
+        fun  newIntent(page: Int): Intent {
             return Intent().apply {
                 putExtra(PAGE, page)
             }
